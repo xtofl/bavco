@@ -1,5 +1,7 @@
 # Faces: the Backlog
 
+Hint: use this backlog in your commits: when taking up a story, change 'TODO' to 'DOING', when ready, change it to 'DONE'.
+
 1. TODO: I want to run a program that draws me a face.  This face can be the same one every single time.
     * It can be a command line program e.g. `face.py`.
     * The face should have an outline.
