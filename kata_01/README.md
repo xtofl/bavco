@@ -38,7 +38,7 @@ As an End User, pretend you know the previous version only.  From the release no
 
 ## Retrospective
 
-Take a moment to decide
+After the Kata, take a moment to decide
 
 * Individually:
   * what skills did you learn this time?
@@ -47,4 +47,4 @@ Take a moment to decide
 * As a team:
   * what can you apply to your daily work?
   * what collaboration skills did you achieve?
-  * 
+
