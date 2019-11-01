@@ -28,6 +28,14 @@ The product is small enough to complete three releases in 6 sprints of 10 minute
 
 ## Go
 
+For each sprint, choose who takes up the role of the End User.  This user should leave the process room until the next version is released.
+
+Now plan the sprint.  Divide the work: create a feature branch for each story, start implementing and merge to development branch when ready.
+
+After the second sprint, create a release branch, add a release note document and a changelog document.  Then tag the release.  Now after the sprint review, call in the End User and hand him the tagged software.
+
+As an End User, pretend you know the previous version only.  From the release notes, yoi should be able to find out what's in this release for you.
+
 ## Retrospective
 
 Take a moment to decide
