@@ -24,5 +24,3 @@ Hint: use this backlog in your commits: when taking up a story, change 'TODO' to
     * With a parameter `--face_shape=egg`
 9. TODO: I want to specify the jaws and chin.
     * With a parameter `--jaws=[wide|narrow|pointy]`
-
-notes for the moderator: the egg and trapezium are great candidates for hotfix releases later on: upside down/horizontal/vertical
