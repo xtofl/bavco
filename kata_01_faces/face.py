@@ -14,12 +14,13 @@ def face(options):
         """)
     return "\n".join(parts)
 
-Version = namedtuple("Version", "major minor bugfix")
+Version = namedtuple("Version", "major minor bugfix phase")
 
 version = Version(
     major=1,
-    minor=0,
-    bugfix=0)
+    minor=1,
+    bugfix=0,
+    phase="alpha")
 
 def main():
     parser = ArgumentParser()
@@ -27,7 +28,7 @@ def main():
     parser.add_argument("--version", action="store_true")
     options = parser.parse_args()
     if options.version:
-        print("version: {}.{}.{}".format(version.major, version.minor, version.bugfix))
+        print("{} version: {}.{}.{}".format(version.phase, version.major, version.minor, version.bugfix))
     else:
         print(face(parser.parse_args()))
 
