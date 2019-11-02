@@ -6,7 +6,7 @@ Hint: use this backlog in your commits: when taking up a story, change 'TODO' to
     * It can be a command line program e.g. `face.py`.
     * The face should have an outline.
     * The face should have two eyes and a mouth.
-2. TODO: I want to specify if the face should have a nose or not, so that I can use it as a simplified emoji.
+2. DOING: I want to specify if the face should have a nose or not, so that I can use it as a simplified emoji.
     * This should be specified as a command line parameter `--nose=[none|.|o|O|v]`.
 3. TODO: I want to specify the size of my paper in rows and columns, and the face should grow with it.
     * The face should be on the center of the page
