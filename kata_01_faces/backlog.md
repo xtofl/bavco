@@ -8,7 +8,7 @@ Hint: use this backlog in your commits: when taking up a story, change 'TODO' to
     * The face should have two eyes and a mouth.
 2. DONE: I want to specify if the face should have a nose or not, so that I can use it as a simplified emoji.
     * This should be specified as a command line parameter `--nose=[none|.|o|O|v]`.
-3. TODO: I want to specify the size of my paper in rows and columns, and the face should grow with it.
+3. DOING: I want to specify the size of my paper in rows and columns, and the face should grow with it.
     * The face should be on the center of the page
     * The page outline can be made visual with `--paper_outline`, but is invisible otherwise
 4. TODO: I want to specify the feeling of the face.
