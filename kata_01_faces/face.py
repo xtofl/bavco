@@ -66,7 +66,7 @@ version = Version(
     major=1,
     minor=1,
     bugfix=0,
-    phase="alpha")
+    phase="release")
 
 def main():
     parser = ArgumentParser()
