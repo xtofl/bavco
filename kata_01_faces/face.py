@@ -64,9 +64,9 @@ Version = namedtuple("Version", "major minor bugfix phase")
 
 version = Version(
     major=1,
-    minor=1,
+    minor=2,
     bugfix=0,
-    phase="release")
+    phase="alpha")
 
 def main():
     parser = ArgumentParser()
