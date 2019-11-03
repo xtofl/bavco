@@ -32,6 +32,13 @@ def draw_nose(page, nose):
     radius = (len(page)-1) // 2
     draw_circle(page, (radius, radius+1), .5, nose, floor)
 
+def draw_outline(page):
+    page[0] = list("-" for _ in page)
+    for line in page[1:-1]:
+        line[0] = "|"
+        line[-1] = "|"
+    page[-1] = "_" * len(page)
+
 def draw_mouth(page):
     y = int(len(page) - .3*len(page))
     width = len(page) // 4
@@ -47,6 +54,9 @@ def face(options):
     if options.nose:
         draw_nose(page, options.nose)
     draw_mouth(page)
+
+    if options.paper_outline:
+        draw_outline(page)
 
     return "\n".join(" ".join(line) for line in page)
 
