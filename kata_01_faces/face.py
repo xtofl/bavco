@@ -4,50 +4,29 @@ from argparse import ArgumentParser
 from collections import namedtuple
 from math import sqrt, ceil, floor
 
-def draw_circle(page, center, radius, character="x", round=ceil):
-    x0, y0 = center
-    for x in range(-int(radius), int(radius)+1):
-        y = round(sqrt(radius*radius - x*x))
-        page[int(y0 - y)][int(x0 + x)] = character
-        page[int(y0 + y)][int(x0 + x)] = character
-
-    return page
+from page import Page
 
 def draw_eyes(page):
-    size = len(page)
-    draw_circle(page, (.3*size, .3*size), .5, "O", floor)
-    draw_circle(page, (size-.3*size, .3*size), .5, "O", floor)
-
-def create_page(size):
-    page = list(
-        list(" " for _ in range(size))
-            for _ in range(size))
-    return page
+    size = page.width()
+    page.draw_circle((.3*size, .3*size), .5, "O", floor)
+    page.draw_circle((size-.3*size, .3*size), .5, "O", floor)
 
 def draw_face_outline(page):
-    radius = (len(page)-1) // 2
-    draw_circle(page, (radius, radius), radius, ".")
+    radius = (page.width()-1) // 2
+    page.draw_circle((radius, radius), radius, ".")
 
 def draw_nose(page, nose):
-    radius = (len(page)-1) // 2
-    draw_circle(page, (radius, radius+1), .5, nose, floor)
-
-def draw_outline(page):
-    page[0] = list("-" for _ in page)
-    for line in page[1:-1]:
-        line[0] = "|"
-        line[-1] = "|"
-    page[-1] = "_" * len(page)
+    radius = (page.width()-1) // 2
+    page.draw_circle((radius, radius+1), .5, nose, floor)
 
 def draw_mouth(page):
-    y = int(len(page) - .3*len(page))
-    width = len(page) // 4
-    x0 = len(page)//2
-    for x in range(x0-width, x0+width):
-        page[y][x] = "-"
+    y = int(page.width() - .3*page.width())
+    width = page.width() // 4
+    x0 = page.width()//2
+    page.draw_line((x0-width, y), (x0+width, y))
 
 def face(options):
-    page = create_page(options.page_width)
+    page = Page(options.page_width)
 
     draw_face_outline(page)
     draw_eyes(page)
@@ -56,9 +35,9 @@ def face(options):
     draw_mouth(page)
 
     if options.paper_outline:
-        draw_outline(page)
+        page.draw_outline()
 
-    return "\n".join(" ".join(line) for line in page)
+    return page.rendered()
 
 Version = namedtuple("Version", "major minor bugfix phase")
 
