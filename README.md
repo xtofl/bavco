@@ -35,6 +35,17 @@ Doesn't matter much right now; the idea is that you have
 
 The Kata should allow you to recognise your model.
 
+## How does it Work? <a name="how-does-it-work"></a>
+
+Each `kata_NN_...` directory describes a kata with a `README.md` and a
+`backlog.md` file.
+
+The `backlog.md` file contains the backlog as a simple bullet list of user
+stories labeled 'TODO'.
+
+Before starting a kata, make a new, team-shared fork of this repository.  While
+resolving items on the backlog, gradually replace the 'TODO' tags with 'DONE'.
+
 ## Reading Material
 
 Plenty has been written out there already.

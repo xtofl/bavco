@@ -15,6 +15,9 @@ specification.
 The product is small enough to complete three releases in 6 sprints of 10
 minutes each.
 
+Refer to the [main README](../README.md#how-does-it-work) for how to work with
+the backlog.
+
 ## Roles
 
 * Product Owner: You will be asked about what to create.  You will have to
@@ -44,10 +47,10 @@ start implementing and merge to development branch when ready.
 
 After the second sprint, create a release branch, add a release note document
 and a changelog document. Then tag the release. Now after the sprint review,
-call in the End User and hand him the tagged software.
+call in the End User and hand them the tagged software.
 
 As an End User, pretend you know the previous version only. From the release
-notes, yoi should be able to find out what's in this release for you.
+notes, you should be able to find out what's in this release for you.
 
 ## Retrospective
 
